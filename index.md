@@ -23,7 +23,7 @@
 <br>
 Enter text here:  
 <br>
-<textarea rows="10" cols="60" id="myTextarea">  <
+<textarea rows="10" cols="60" id="myTextarea">  
 </textarea>  <!--textare for input -->
 <br>
 Enter key here: 
