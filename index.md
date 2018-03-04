@@ -360,7 +360,7 @@ Result: <br>
 
 <script type="text/javascript">
 
-    function OneTimePad(encdec, text, key)
+    function OneTimePad1(encdec, text, key)
     {
         var pad, i, out, c, uc;
 
@@ -411,7 +411,7 @@ Result: <br>
         var key = document.getElementById('key').value;
 
 // encrypts data and adds it in result element
-        document.getElementById('result').value = OneTimePad(- 1, text, key);
+        document.getElementById('result').value = OneTimePad1(- 1, text, key);
         return false;
     }
 
