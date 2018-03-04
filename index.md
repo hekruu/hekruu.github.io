@@ -1,19 +1,19 @@
 <html>
 <head>
-<style>    
-<!-- Style for buttons -->
-.button {
-    background-color: #3090C7; <!-- light blue -->
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-</style>
+    <style>
+        <!-- Style for buttons -->
+        .button {
+            background-color: #3090C7; <!-- light blue -->
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <!-- Body of the file: heading, buttons, textareas for inputs, scripts for 3 buttons  and textarea for result --->
@@ -21,12 +21,12 @@
 <body>
 <h1 style="color:blue;">Hello friend!</h1>  <!-- greeting -->
 <br>
-Enter text here:  
+Enter text here:
 <br>
 <textarea rows="10" cols="60" id="myTextarea">  
 </textarea>  <!--textare for input -->
 <br>
-Enter key here: 
+Enter key here:
 <br>
 <input type="text" name="text" id="key" size="65" />
 <br>
@@ -40,11 +40,11 @@ Enter key here:
 Result: <br>
 <textarea rows="5" cols="60" id="result">  
 </textarea> <!-- textarea for result -->
-<br> 
+<br>
 
 <!-- script for SHA512 button. Code is taken from: http://coursesweb.net/javascript/sha512-encrypt-hash_cs -->
 
-<script type="text/javascript">   
+<script type="text/javascript">
 
     function SHA512(str) {
         function int64(msint_32, lsint_32) {
@@ -315,7 +315,7 @@ Result: <br>
 
 
     document.getElementById('Sha').onclick = function() {
-        var txt_string = document.getElementById('myTextarea').value; 
+        var txt_string = document.getElementById('myTextarea').value;
 
         document.getElementById('result').value = SHA512(txt_string);
         return false;
@@ -381,27 +381,27 @@ key = the key (pad) to use
 
         return out;
     }
-    
-     
-    <! -- register onclick events for Encrypt button, makes variables from input. -->
+
+
+    // -- register onclick events for Encrypt button, makes variables from input.
     document.getElementById('OTP1').onclick = function() {
-        var text = document.getElementById('myTextarea').value;  
-        var key = document.getElementById('key').value;
-        var encdec = 1
-        
-        <-- encrypts data and adds it to result textarea -->
-        document.getElementById('result').value = OneTimePad(encdec, text, key);
-        return false;
-    }
-    
-    <! -- register onclick events for decrypt button, makes variables from input. -->
+            var text = document.getElementById('myTextarea').value;
+            var key = document.getElementById('key').value;
+            var encdec = 1
+
+               //encrypts data and adds it to result textarea
+            document.getElementById('result').value = OneTimePad(encdec, text, key);
+            return false;
+        }
+
+        // register onclick events for decrypt button, makes variables from input.
     document.getElementById('OTP2').onclick = function() {
-        var text = document.getElementById('myTextarea').value;   
+        var text = document.getElementById('myTextarea').value;
         var key = document.getElementById('key').value;
         var encdec = -1;
-        
-        <-- decrypts data and adds it to result textarea -->
-        
+
+    //decrypts data and adds it to result textarea 
+
         document.getElementById('result').value = OneTimePad(encdec, text, key);
         return false;
     }
