@@ -11,10 +11,12 @@ Click me to display Date and Time.</button>
 
 <form action="#" method="post">
 Enter a text:<br/>
-<input type="text" name="strex" id="strex" size="20" /> <button id="cryptstr">Encrypt</button><br/>
+<input type="text" name="strex" id="strex" size="500" /> <button id="cryptstr">Encrypt</button><br/>
+
 SHA512 hash string:<br/>
-<input type="text" name="strcrypt" id="strcrypt" size="33" />
+<input type="text" name="strcrypt" id="strcrypt" size="500" />
 </form>
+
 <script type="text/javascript">
 // Here add the code of SHA512 function
 
@@ -295,21 +297,11 @@ return false;
 }
 </script>
 
-<form action="#" method="post">
-Enter a text:<br/>
-<input type="text" name="strex" id="strex" size="100" /> <button id="cryptstr">Encrypt</button><br/>
-SHA512 hash string:<br/>
-<input type="text" name="strcrypt" id="strcrypt" size="33" />
+<form action = "#" method="post">
+Enter a key:<br>
+<input type="number" name="key" id="keykene" size="100" />
+  
 </form>
-
-<form action="#" method="post">
-Enter a key:<br/>
-<input type="text" name="strex" id="strex" size="20" /> <button id="cryptstr">Encrypt</button><br/>
-SHA512 hash string:<br/>
-<input type="text" name="strcrypt" id="strcrypt" size="33" />
-</form>
-
-
 
 </body>
 </html> 
