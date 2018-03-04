@@ -1,6 +1,6 @@
 <html>
 <body>
-<h1>Hello World</h1>
+<h1 style="background-color:DodgerBlue;">Hello friend!</h1>
 
 Enter text here: <br>
 <textarea rows="10" cols="60" id="myTextarea">
