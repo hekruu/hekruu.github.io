@@ -1,8 +1,9 @@
 <html>
 <head>
-<style>
+<style>    
+<!-- Style for buttons -->
 .button {
-    background-color: #3090C7;
+    background-color: #3090C7; <!-- light blue -->
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -14,16 +15,15 @@
 }
 </style>
 </head>
-    
-      
-<body>
-<h1 style="color:blue;">Hello friend!</h1>
 
-<p size="6" style="font-family:Comic Sans MS;"> My name is Helina and welcome to my first web page.</p>
+<!-- Body of the file: heading, buttons, textareas for inputs, scripts for 3 buttons  and textarea for result --->
+
+<body>
+<h1 style="color:blue;">Hello friend!</h1>  <!-- greeting -->
 <br>
-Enter text here:
+Enter text here:  
 <br>
-<textarea rows="10" cols="60" id="myTextarea">
+<textarea rows="10" cols="60" id="myTextarea">  <!--textare for input -->
 </textarea><br>
 Enter key here: 
 <br>
@@ -31,16 +31,18 @@ Enter key here:
 <br>
 <br>
 
-<button class ="button" id="OTP1">OTP encrypt</button>
+<button class ="button" id="OTP1">OTP encrypt</button>  <!-- buttons -->
 <button  class ="button" id="OTP2">OTP decrypt</button>
 <button class ="button" id="Sha">SHA-2</button>
 <br>
 
 Result: <br>
-<textarea rows="5" cols="60" id="result">
+<textarea rows="5" cols="60" id="result">  <!-- textarea for result -->
 </textarea><br>
 
-<script type="text/javascript">
+<!-- script for SHA512 button. Code is taken from: http://coursesweb.net/javascript/sha512-encrypt-hash_cs -->
+
+<script type="text/javascript">   
 
     function SHA512(str) {
         function int64(msint_32, lsint_32) {
@@ -311,12 +313,25 @@ Result: <br>
 
 
     document.getElementById('Sha').onclick = function() {
-        var txt_string = document.getElementById('myTextarea').value;    // gets data from input text
+        var txt_string = document.getElementById('myTextarea').value; 
 
         document.getElementById('result').value = SHA512(txt_string);
         return false;
     }
 </script>
+
+
+<!-- Script for OTP encrypt and decrypt button. 
+One-Time Pad
+this code was written by Tyler Akins and placed in the public domain.
+It would be nice if you left this header intact.  http://rumkin.com
+Implements a one-time pad for only alphabetic characters.  Preserves
+the character case in the text (not the key).
+encdec = -1 for decode, 1 for encode
+text = the text to encode or decode.
+key = the key (pad) to use
+-->
+
 
 <script type="text/javascript">
 
@@ -364,23 +379,32 @@ Result: <br>
 
         return out;
     }
-
+    
+     
+    <! -- register onclick events for Encrypt button, makes variables from input. -->
     document.getElementById('OTP1').onclick = function() {
-        var text = document.getElementById('myTextarea').value; 
+        var text = document.getElementById('myTextarea').value;  
         var key = document.getElementById('key').value;
         var encdec = 1
-
+        
+        <-- encrypts data and adds it to result textarea -->
         document.getElementById('result').value = OneTimePad(encdec, text, key);
         return false;
     }
+    
+    <! -- register onclick events for decrypt button, makes variables from input. -->
     document.getElementById('OTP2').onclick = function() {
         var text = document.getElementById('myTextarea').value;   
         var key = document.getElementById('key').value;
         var encdec = -1;
+        
+        <-- decrypts data and adds it to result textarea -->
+        
         document.getElementById('result').value = OneTimePad(encdec, text, key);
         return false;
     }
 
 </script>
+<br>
 </body>
 </html>
