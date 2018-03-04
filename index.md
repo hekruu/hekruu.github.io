@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <body>
 <h1>Hello World</h1>
@@ -334,7 +335,7 @@ Result: <br>
                 {
                     pad = "AAAAAAAA";
                 }
-                c = c.charCodeAt(0) - uc.charCodeAt(0) + encdec * (pad.charCodeAt(0) - 'A'.charCodeAt(0));
+                c = c.charCodeAt(0) - uc.charCodeAt(0) + (encdec * (pad.charCodeAt(0) - 'A'.charCodeAt(0)));
                 c = (c + 26) % 26;
                 c = String.fromCharCode(uc.charCodeAt(0) + c + 1);
                 pad = pad.slice(1, pad.length);
@@ -354,7 +355,7 @@ Result: <br>
         document.getElementById('result').value = OneTimePad(1, text, key);
         return false;
     }
-    
+
 </script>
 
 <script type="text/javascript">
@@ -393,68 +394,9 @@ Result: <br>
                 {
                     pad = "AAAAAAAA";
                 }
-                c = c.charCodeAt(0) - uc.charCodeAt(0) + encdec * (pad.charCodeAt(0) - 'A'.charCodeAt(0));
+                c = c.charCodeAt(0) - uc.charCodeAt(0) + (encdec * (pad.charCodeAt(0) - 'A'.charCodeAt(0)));
                 c = (c + 26) % 26;
-                c = String.fromCharCode(uc.charCodeAt(0) + c + 1);
-                pad = pad.slice(1, pad.length);
-            }
-            out += c;
-        }
-
-        return out;
-    }
-
-    // register onclick events for Encrypt button
-    document.getElementById('OTP1').onclick = function() {
-        var text = document.getElementById('myTextarea').value;    // gets data from input text
-        var key = document.getElementById('key').value;
-
-// encrypts data and adds it in result element
-        document.getElementById('result').value = OneTimePad(1, text, key);
-        return false;
-    }
-    
-</script>
-
-<script type="text/javascript">
-
-    function OneTimePad(encdec, text, key)
-    {
-        var pad, i, out, c, uc;
-
-        pad = "";
-        key = key.toUpperCase();
-        for (i = 0; i < key.length; i ++)
-        {
-            c = key.charAt(i)
-            if (c >= 'A' && c <= 'Z')
-            {
-                pad += c;
-            }
-        }
-
-        out = "";
-        for (i = 0; i < text.length; i ++)
-        {
-            c = text.charAt(i);
-            uc = ' ';
-            if (c >= 'A' && c <= 'Z')
-            {
-                uc = 'A';
-            }
-            if (c >= 'a' && c <= 'z')
-            {
-                uc = 'a';
-            }
-            if (uc != ' ')
-            {
-                if (pad.length == 0)
-                {
-                    pad = "AAAAAAAA";
-                }
-                c = c.charCodeAt(0) - uc.charCodeAt(0) + encdec * (pad.charCodeAt(0) - 'A'.charCodeAt(0));
-                c = (c + 26) % 26;
-                c = String.fromCharCode(uc.charCodeAt(0) + c + 1);
+                c = String.fromCharCode(uc.charCodeAt(0) + c - 1);
                 pad = pad.slice(1, pad.length);
             }
             out += c;
@@ -469,10 +411,10 @@ Result: <br>
         var key = document.getElementById('key').value;
 
 // encrypts data and adds it in result element
-        document.getElementById('result').value = OneTimePad(-1, text, key);
+        document.getElementById('result').value = OneTimePad(- 1, text, key);
         return false;
     }
-    
-</script>    
+
+</script>
 </body>
 </html>
