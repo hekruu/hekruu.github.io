@@ -3,11 +3,16 @@
 <body>
 <h1>Hello World</h1>
   
-
 <form action="#" method="post">
 Enter a text:<br/>
 <input type="text" name="strex" id="strex" size="500" /> 
 
+<form action = "#" method="post">
+Enter a key:<br>
+<input type="number" name="key" id="keykene" size="100" />
+  
+<button id="cryptstr">Encrypt</button><br/>
+  
 SHA512 hash string:<br/>
 <input type="text" name="strcrypt" id="strcrypt" size="500" />
 </form>
@@ -291,14 +296,6 @@ document.getElementById('strcrypt').value = SHA512(txt_string);
 return false;
 }
 </script>
-
-<form action = "#" method="post">
-Enter a key:<br>
-<input type="number" name="key" id="keykene" size="100" />
-  
-  <button id="cryptstr">Encrypt</button><br/>
-  
-</form>
 
 </body>
 </html> 
