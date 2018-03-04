@@ -1,11 +1,14 @@
 <html>
 <body>
-<h1 style="background-color:DodgerBlue;">Hello friend!</h1>
+<h1 style="color:blue;">Hello friend!</h1>>Hello friend!</h1>
 
-Enter text here: <br>
+
+Enter text here:
+<br>
 <textarea rows="10" cols="60" id="myTextarea">
 </textarea><br>
-Enter key here: <br>
+Enter key here: 
+<br>
 <input type="text" name="text" id="key" size="65" />
 <br>
 <br>
