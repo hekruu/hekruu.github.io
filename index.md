@@ -1,18 +1,5 @@
 <html>
-<body>
-<h1 style="color:blue;">Hello friend!</h1>
-
-<p size="6" style="font-family:Comic Sans MS;"> My name is Helina and welcome to my first web page.</p>
-<br>
-Enter text here:
-<br>
-<textarea rows="10" cols="60" id="myTextarea">
-</textarea><br>
-Enter key here: 
-<br>
-<input type="text" name="text" id="key" size="65" />
-<br>
-<br>
+<head>
 <style>
 .button {
     background-color: #4CAF50;
@@ -27,6 +14,25 @@ Enter key here:
     cursor: pointer;
 }
 </style>
+</head>
+    
+    
+    
+<body>
+<h1 style="color:blue;">Hello friend!</h1>
+
+<p size="6" style="font-family:Comic Sans MS;"> My name is Helina and welcome to my first web page.</p>
+<br>
+Enter text here:
+<br>
+<textarea rows="10" cols="60" id="myTextarea">
+</textarea><br>
+Enter key here: 
+<br>
+<input type="text" name="text" id="key" size="65" />
+<br>
+<br>
+
 <button class ="Button" id="OTP1">OTP encrypt</button>
 <button  class ="Button" id="OTP2">OTP decrypt</button>
 <button class ="Button" id="Sha">SHA-2</button>
