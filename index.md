@@ -17,11 +17,6 @@ SHA512 hash string:<br/>
 </form>
 <script type="text/javascript">
 // Here add the code of SHA512 function
-  
-  /*
-*  Secure Hash Algorithm (SHA512)
-*  http://www.happycode.info/
-*/
 
 function SHA512(str) {
   function int64(msint_32, lsint_32) {
@@ -299,6 +294,22 @@ document.getElementById('strcrypt').value = SHA512(txt_string);
 return false;
 }
 </script>
+
+<form action="#" method="post">
+Enter a text:<br/>
+<input type="text" name="strex" id="strex" size="100" /> <button id="cryptstr">Encrypt</button><br/>
+SHA512 hash string:<br/>
+<input type="text" name="strcrypt" id="strcrypt" size="33" />
+</form>
+
+<form action="#" method="post">
+Enter a key:<br/>
+<input type="text" name="strex" id="strex" size="20" /> <button id="cryptstr">Encrypt</button><br/>
+SHA512 hash string:<br/>
+<input type="text" name="strcrypt" id="strcrypt" size="33" />
+</form>
+
+
 
 </body>
 </html> 
