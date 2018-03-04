@@ -2,7 +2,7 @@
 <body>
 <h1 style="color:blue;">Hello friend!</h1>
 
-<p style="font-family:Comic Sans MS;"> My name is Helina and welcome to my first web page.</p>
+<p size="6" style="font-family:Comic Sans MS;"> My name is Helina and welcome to my first web page.</p>
 <br>
 Enter text here:
 <br>
