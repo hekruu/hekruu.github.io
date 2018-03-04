@@ -23,8 +23,9 @@
 <br>
 Enter text here:  
 <br>
-<textarea rows="10" cols="60" id="myTextarea">  <!--textare for input -->
-</textarea><br>
+<textarea rows="10" cols="60" id="myTextarea">  <
+</textarea>  <!--textare for input -->
+<br>
 Enter key here: 
 <br>
 <input type="text" name="text" id="key" size="65" />
@@ -37,8 +38,9 @@ Enter key here:
 <br>
 
 Result: <br>
-<textarea rows="5" cols="60" id="result">  <!-- textarea for result -->
-</textarea><br>
+<textarea rows="5" cols="60" id="result">  
+</textarea> <!-- textarea for result -->
+<br> 
 
 <!-- script for SHA512 button. Code is taken from: http://coursesweb.net/javascript/sha512-encrypt-hash_cs -->
 
