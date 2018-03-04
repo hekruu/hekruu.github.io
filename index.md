@@ -1,8 +1,9 @@
 <html>
 <body>
-<h1 style="color:blue;">Hello friend!</h1>>Hello friend!</h1>
+<h1 style="color:blue;">Hello friend!</h1>  //tervitamine
 
-
+<h3 style="font-family:Comic Sans MS;"> My name is Helina and welcome to my first web page.</h3>
+<br>
 Enter text here:
 <br>
 <textarea rows="10" cols="60" id="myTextarea">
@@ -12,10 +13,21 @@ Enter key here:
 <input type="text" name="text" id="key" size="65" />
 <br>
 <br>
-
-<button id="OTP1">OTP encrypt</button>
-<button id="OTP2">OTP decrypt</button>
-<button id="Sha">SHA-2</button>
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+<button class ="Button" id="OTP1">OTP encrypt</button>
+<button  class ="Button" id="OTP2">OTP decrypt</button>
+<button class ="Button" id="Sha">SHA-2</button>
 <br>
 
 Result: <br>
