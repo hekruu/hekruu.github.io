@@ -3,7 +3,6 @@
 <style>
 .button {
     background-color: #3090C7;
-    border: 1px solid #000000;
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -310,11 +309,10 @@ Result: <br>
         return binb2hex(binarray);
     }
 
-    // register onclick events for Encrypt button
+
     document.getElementById('Sha').onclick = function() {
         var txt_string = document.getElementById('myTextarea').value;    // gets data from input text
 
-// encrypts data and adds it in result element
         document.getElementById('result').value = SHA512(txt_string);
         return false;
     }
@@ -367,7 +365,6 @@ Result: <br>
         return out;
     }
 
-    // register onclick events for Encrypt button
     document.getElementById('OTP1').onclick = function() {
         var text = document.getElementById('myTextarea').value; 
         var key = document.getElementById('key').value;
