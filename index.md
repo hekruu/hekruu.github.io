@@ -3,7 +3,7 @@
 <style>
 .button {
     background-color: #3090C7;
-    border: 2px solid #000000;
+    border: 1px solid #000000;
     color: white;
     padding: 15px 32px;
     text-align: center;
