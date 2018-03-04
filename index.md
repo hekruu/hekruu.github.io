@@ -2,8 +2,8 @@
 <head>
 <style>
 .button {
-    background-color: #4CAF50;
-    border: none;
+    background-color: #3090C7;
+    border: 2px solid #000000;
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -16,8 +16,7 @@
 </style>
 </head>
     
-    
-    
+      
 <body>
 <h1 style="color:blue;">Hello friend!</h1>
 
@@ -33,9 +32,9 @@ Enter key here:
 <br>
 <br>
 
-<button class ="Button" id="OTP1">OTP encrypt</button>
-<button  class ="Button" id="OTP2">OTP decrypt</button>
-<button class ="Button" id="Sha">SHA-2</button>
+<button class ="button" id="OTP1">OTP encrypt</button>
+<button  class ="button" id="OTP2">OTP decrypt</button>
+<button class ="button" id="Sha">SHA-2</button>
 <br>
 
 Result: <br>
