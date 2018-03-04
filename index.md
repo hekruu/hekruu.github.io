@@ -1,8 +1,8 @@
 <html>
 <body>
-<h1 style="color:blue;">Hello friend!</h1>  //tervitamine
+<h1 style="color:blue;">Hello friend!</h1>
 
-<h3 style="font-family:Comic Sans MS;"> My name is Helina and welcome to my first web page.</h3>
+<p style="font-family:Comic Sans MS;"> My name is Helina and welcome to my first web page.</p>
 <br>
 Enter text here:
 <br>
@@ -13,6 +13,7 @@ Enter key here:
 <input type="text" name="text" id="key" size="65" />
 <br>
 <br>
+<style>
 .button {
     background-color: #4CAF50;
     border: none;
@@ -25,6 +26,7 @@ Enter key here:
     margin: 4px 2px;
     cursor: pointer;
 }
+</style>
 <button class ="Button" id="OTP1">OTP encrypt</button>
 <button  class ="Button" id="OTP2">OTP decrypt</button>
 <button class ="Button" id="Sha">SHA-2</button>
