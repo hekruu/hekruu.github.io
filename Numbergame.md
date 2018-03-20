@@ -21,13 +21,11 @@ Enter number here:
 <br>
 <input type="text" name="text" id="key" size="65" />
 <br>
-<br>
 
-<button class ="button" id="Calculate"></button>  <!-- buttons -->
-<button  class ="button" id="Check">OTP decrypt</button>
+<button class ="button" id="Calculate">Calculate</button>  <!-- buttons -->
+<button  class ="button" id="Check">Check</button>
 <br>
 
 Result: <br>
-<textarea rows="1" cols="1" id="result">  
-</textarea> <!-- textarea for result -->
+<output type="text" name="text2" id="key" size="65" />
 <br>
