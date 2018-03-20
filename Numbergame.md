@@ -27,5 +27,5 @@ Enter number here:
 <br>
 
 Result: <br>
-<output type="text" name="text2" id="key" size="65" />
-<br>
+<textarea rows="1" cols="60" id="result">  
+</textarea> <!-- textarea for result -->
