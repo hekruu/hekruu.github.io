@@ -1,20 +1,4 @@
 <html>
-<head>
-    <style>
-        <!-- Style for buttons -->
-        .button {
-            background-color: #3090C7; <!-- light blue -->
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-        }
-    </style>
-</head>
 
 <body>
 Binary number here:
@@ -34,18 +18,18 @@ Result: <br>
 </textarea> <!-- textarea for result -->
 
 <script>
-
+    /*Copycat*/
     function Copycat(string) {
         var sum = 0;
 
-        if (string.charAt(0) === "0") {
+        if (string.charAt(0) === "0") { //copycat cooperates
             sum += 3;
             cheat = true;
         } else {
             sum += 2;
         }
 
-        for (var i = 1; i < string.length; i++) {
+        for (var i = 1; i < string.length; i++) {  //first user"s binary number = second move for copycat
             var lastinput = string.charAt(i - 1);
 
             if (string.charAt(i) === "1") {
@@ -69,7 +53,7 @@ Result: <br>
         var sum = 0;
 
         for (var i = 0; i < string.length; i++) {
-            if (string.charAt(i) === "0") {
+            if (string.charAt(i) === "0") {  //if user cheats, we both get nothing.
                 sum += 0;
             } else {
                 sum += 2;
@@ -82,7 +66,7 @@ Result: <br>
         var sum = 0;
 
         for (var i = 0; i < string.length; i++) {
-            if (string.charAt(i) === "0") {
+            if (string.charAt(i) === "0") {  // if user cheats, this girls still wants to be your friend.
                 sum += 3;
             } else {
                 sum += 2;
@@ -91,9 +75,9 @@ Result: <br>
         return sum;
     }
 
-    function grudger(string) {
+    function grudger(string) {  //Guy with a huge yellow hat
         var sum = 0;
-        var cooperate = true;
+        var cooperate = true;  //he likes to cooperate, but if you cheat, he acts like a "always cheater".
 
         for (var i =0; i < string.length; i++) {
             if (cooperate) { //user cooperates
@@ -114,42 +98,42 @@ Result: <br>
         return sum;
     }
 
-    function detective(string) {
+    function detective(string) {  //The smart guy. First 4 rounds analyzes you, then acts like copycat or always cheater
         var sum = 0;
         var cheat = false;
 
-        if (string.charAt(0) === "0") {
+        if (string.charAt(0) === "0") {  // user cheats, detective cooperates
             sum += 3;
-            cheat = true;
+            cheat = true;  //detective remembers this.
         } else {
             sum += 2;
         }
 
-        if (string.charAt(1) === "0") {
+        if (string.charAt(1) === "0") {  // detective cheats and user cheats, they both get nothing.
             sum += 0;
             cheat = true;
         } else {
             sum -= 1;
         }
 
-        if (string.charAt(2) === "0") {
+        if (string.charAt(2) === "0") {  //detective cooperates
             sum += 3;
             cheat = true;
         } else {
             sum += 2;
         }
 
-        if (string.charAt(3) === "0") {
+        if (string.charAt(3) === "0") {  //detective cooperates
             sum += 3;
             cheat = true;
         } else {
             sum += 2;
         }
 
-        for (var i = 4; i < string.length ; i++) {
+        for (var i = 4; i < string.length ; i++) {  // now detective starst to act like copycat or always cheater.
             var lastinput = string.charAt(i - 1);
 
-            if (cheat) {
+            if (cheat) {  //if user cheated, detective acts like copycat. Code is copy paste from below.
                 if (string.charAt(i) === "1") {
                     if (lastinput === "0") {
                         sum -= 2;
@@ -163,7 +147,7 @@ Result: <br>
                         sum += 3;
                     }
                 }
-            } else {
+            } else {  // if user didnt cheat, detective acts like always cheat.
                 if (string.charAt(i) === "0") {
                     sum += 0;
                 } else {
@@ -174,24 +158,29 @@ Result: <br>
         return sum;
     }
 
+    /*
+    * Calculates the score for binary value.
+    * */
     function calculate() {
         var inputText = document.getElementById("input").value;
         var output = 0;
 
-        if (inputText.length !== 25) {
+        if (inputText.length !== 25) {  //binary solution must be 25 digits.
             document.getElementById("result").value = "Input invalid";
             return;
         } else {
-            output += Copycat(inputText.substring(0, 5));
-            output += alwaysCheat(inputText.substring(5, 9));
-            output += alwaysCooperate(inputText.substring(9, 13));
-            output += grudger(inputText.substring(13, 18));
-            output += detective(inputText.substring(18, 25));
+            output += Copycat(inputText.substring(0, 5));  // 5 steps
+            output += alwaysCheat(inputText.substring(5, 9));  //4 steps
+            output += alwaysCooperate(inputText.substring(9, 13)); //4 steps
+            output += grudger(inputText.substring(13, 18)); //5 steps
+            output += detective(inputText.substring(18, 25)); //7 steps
             document.getElementById("result").value = output;
             return output;
         }
     }
-
+    /*
+    *Script for "check" button, calculates the value from binary and checks if the given number and binary value match.
+     */
     function checkIfvalid() {
         var inputNumber = document.getElementById("number").value;
         if (inputNumber === calculate().toString()) {
