@@ -19,7 +19,7 @@
 <!-- Body of the file: heading, buttons, textareas for inputs, scripts for 3 buttons  and textarea for result --->
 
 <body>
-<h1 style="color:blue;">Hello friend!</h1>  <!-- greeting -->
+<h1 style="color:blue;">Grypto Äpp</h1>  <!-- greeting -->
 <br>
 Enter text here:
 <br>
