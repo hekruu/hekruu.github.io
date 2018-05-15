@@ -1271,7 +1271,7 @@ public class Anto_Helina_Strategy implements ComputerStrategy {
 
     @Override
     public String getName() {
-        return "Anto-Helina";
+        return "Anto-Helina ";
     }
 
 }
